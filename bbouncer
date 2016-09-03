@@ -4,7 +4,8 @@
 
 scriptdir="`dirname $0`"
 cd "$scriptdir"
-export PATH="`pwd`/util:/Developer/Tools:$PATH:."
+utildir=`realpath "$scriptdir"`"/util"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$utildir"
 
 export printWidth=20
 
