@@ -29,7 +29,7 @@ create () {
     chmod +a "www allow read" many-metadata
     chmod +a "nobody allow read" many-metadata
     sudo chown www:www many-metadata
-    chflags uappnd,nodump many-metadata
+    sudo chflags uappnd,nodump many-metadata
     # Lock the file to make sure the copier doesn't lock it too early
     sudo SetFile -a L many-metadata
     
