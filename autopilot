@@ -12,6 +12,10 @@ echo
 set -ex
 
 make
+hdiutil eject /Volumes/Src || true
+hdiutil eject /Volumes/Dst || true
+rm -v Src.sparseimage || true
+rm -v Dst.sparseimage || true
 ./bbouncer create-vol Src
 ./bbouncer create-vol Dst
 ./bbouncer create /Volumes/Src
